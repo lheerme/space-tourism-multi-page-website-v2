@@ -55,7 +55,7 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
             whileHover={{
-              scale: 1.2,
+              boxShadow: '0px 0px 0px 88px rgba(255,255,255,0.1036)',
               transition: { duration: 0.5 },
             }}
             onClick={() => navigate('/destination')}

@@ -24,16 +24,24 @@ export default function Header() {
       <NavBar>
         <NavList>
           <NavListItem>
-            <Link to={'/'}>00 home</Link>
+            <Link to={'/'}>
+              <b>00</b> home
+            </Link>
           </NavListItem>
           <NavListItem>
-            <Link to={'/destination'}>01 destination</Link>
+            <Link to={'/destination'}>
+              <b>01</b> destination
+            </Link>
           </NavListItem>
           <NavListItem>
-            <Link to={'/crew'}>02 crew</Link>
+            <Link to={'/crew'}>
+              <b>02</b> crew
+            </Link>
           </NavListItem>
           <NavListItem>
-            <Link to={'/technology'}>03 technology</Link>
+            <Link to={'/technology'}>
+              <b>03</b> technology
+            </Link>
           </NavListItem>
         </NavList>
       </NavBar>
