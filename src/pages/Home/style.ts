@@ -10,11 +10,10 @@ export const Container = styled.main`
   min-height: 100dvh;
   background-image: url(${desktopImg});
   background-size: cover;
-  background-position: center;
   padding-top: 180px;
 `
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;

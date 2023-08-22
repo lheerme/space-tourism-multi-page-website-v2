@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { styled } from 'styled-components'
 
 export const Container = styled.header`
@@ -28,10 +29,14 @@ export const NavList = styled.ul`
   display: flex;
   height: 100%;
   gap: 50px;
-  padding: 0 123px;
+  padding: 0 calc(123px - 28px);
 `
 
-export const NavListItem = styled.li`
+interface NavListItemProps {
+  selected: boolean
+}
+
+export const NavListItem = styled.li<NavListItemProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,4 +48,31 @@ export const NavListItem = styled.li`
   font-weight: 400;
   line-height: normal;
   letter-spacing: 2.7px;
+
+  position: relative;
+
+  a {
+    padding: 10px 7px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      background: ${(props) => props.theme.colors.light};
+      opacity: 0.5021;
+      bottom: 0;
+      left: 0;
+      transition: all 0.5s;
+
+      ${({ selected }) => selected && `
+        opacity: 1;
+        width: 100%;
+      `}
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
 `

@@ -10,6 +10,5 @@ export const Container = styled.main`
   min-height: 100dvh;
   background-image: url(${desktopImg});
   background-size: cover;
-  background-position: center;
   padding-top: 180px;
 `

@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { Container, NavBar, NavList, NavListItem } from './style'
 
 export default function Header() {
+  const { pathname } = useLocation()
+
   return (
     <Container>
       <Link to={'/'}>
@@ -23,22 +25,22 @@ export default function Header() {
       </Link>
       <NavBar>
         <NavList>
-          <NavListItem>
+          <NavListItem selected={pathname === '/'}>
             <Link to={'/'}>
               <b>00</b> home
             </Link>
           </NavListItem>
-          <NavListItem>
+          <NavListItem selected={pathname === '/destination'}>
             <Link to={'/destination'}>
               <b>01</b> destination
             </Link>
           </NavListItem>
-          <NavListItem>
+          <NavListItem selected={pathname === '/crew'}>
             <Link to={'/crew'}>
               <b>02</b> crew
             </Link>
           </NavListItem>
-          <NavListItem>
+          <NavListItem selected={pathname === '/technology'}>
             <Link to={'/technology'}>
               <b>03</b> technology
             </Link>

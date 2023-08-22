@@ -7,19 +7,24 @@ import theme from './styles/theme'
 import Destination from './pages/Destination'
 import Crew from './pages/Crew'
 import Technology from './pages/Technology'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 function App() {
+  const queryClient = new QueryClient()
+
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/destination" element={<Destination />} />
-        <Route path="/crew" element={<Crew />} />
-        <Route path="/technology" element={<Technology />} />
-      </Routes>
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/destination" element={<Destination />} />
+          <Route path="/crew" element={<Crew />} />
+          <Route path="/technology" element={<Technology />} />
+        </Routes>
+      </ThemeProvider>
+    </QueryClientProvider>
   )
 }
 
