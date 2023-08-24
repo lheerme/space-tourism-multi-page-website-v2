@@ -31,14 +31,13 @@ export default function Destination() {
   const [destination, setDestination] = useState(0)
 
   const { data } = useQuery<DestinationsProps[]>({
-    queryKey: ['data'],
+    queryKey: ['destination-data'],
     queryFn: async () => {
       const { data } = await axios.get('data.json')
       return data.destinations
     },
   })
 
-  console.log(images)
   return (
     <Container
       as={motion.main}

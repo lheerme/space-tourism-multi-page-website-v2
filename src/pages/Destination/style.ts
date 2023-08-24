@@ -23,7 +23,6 @@ export const ContentContainer = styled.section`
   width: 100%;
 `
 
-
 export const DestinationContainer = styled.article`
   width: 100%;
   display: flex;
