@@ -10,7 +10,7 @@ export const Container = styled.main`
   min-height: 100dvh;
   background-image: url(${desktopImg});
   background-size: cover;
-  padding-top: 180px;
+  padding-top: 150px;
 `
 
 export const ContentContainer = styled.section`
@@ -28,8 +28,8 @@ export const CrewInfoContainer = styled.article`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  /* max-height: 490px; */
-  height: 490px;
+  height: 510px;
+  padding: 10px 0;
 `
 
 export const SwiperContainer = styled.div`

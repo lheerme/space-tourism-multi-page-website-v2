@@ -30,6 +30,7 @@ export const DestinationContainer = styled.article`
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  padding: 10px 0;
 `
 
 export const Image = styled.img`
@@ -90,27 +91,6 @@ export const DestinationSelectorItem = styled.li<DestinationSelectorItemProps>`
 export const DestinationInfo = styled.div`
   max-width: 450px;
   width: 100%;
-
-  h1 {
-    color: ${(props) => props.theme.colors.light};
-    font-family: 'Bellefair', sans-serif;
-    font-size: 100px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 12px;
-    text-transform: uppercase;
-  }
-
-  & > p {
-    color: ${(props) => props.theme.colors.lighter};
-    font-family: 'Barlow', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    margin-bottom: 34px;
-  }
 `
 
 export const DestinationInfoData = styled.div`
@@ -132,7 +112,7 @@ export const DestinationInfoData = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 28px;
-    margin-bottom: 34px;
+    margin-bottom: 54px;
   }
 `
 

@@ -10,7 +10,7 @@ export const Container = styled.h2<ContainerProps>`
   justify-content: flex-start;
   width: 100%;
   gap: 28px;
-  margin-bottom: 56px;
+  margin-bottom: 64px;
   ${({ margin }) => margin && `
     margin-bottom: ${margin};
   `}
