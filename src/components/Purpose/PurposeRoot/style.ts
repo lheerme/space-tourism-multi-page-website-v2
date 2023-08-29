@@ -14,4 +14,14 @@ export const Container = styled.h2<ContainerProps>`
   ${({ margin }) => margin && `
     margin-bottom: ${margin};
   `}
+
+  @media (max-width: 920px) {
+    padding: 0 calc( 48px - 15px);
+    gap: 19px;
+  }
+
+  @media (max-width: 560px) {
+    gap: 18px;
+    justify-content: center
+  }
 `

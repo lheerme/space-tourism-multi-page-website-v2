@@ -10,8 +10,10 @@ export const Container = styled.main`
   min-height: 100svh;
   min-height: 100dvh;
   background-image: url(${desktopImg});
+  background-position: center;
   background-size: cover;
-  padding-top: 150px;
+  background-repeat: no-repeat;
+  padding: 150px 15px 15px 15px;
 `
 
 export const ContentContainer = styled.section`
@@ -29,6 +31,14 @@ export const TechnologyInfoContainer = styled.article`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
+
+  @media (max-width: 920px) {
+    flex-direction: column-reverse;
+    height: auto;
+    margin-top: 60px;
+    gap: 54px;
+  }
 `
 
 export const TechnologyInfoDataContainer = styled.div`
@@ -37,6 +47,13 @@ export const TechnologyInfoDataContainer = styled.div`
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
+
+  @media (max-width: 920px) {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 44px;
+  }
 `
 
 export const TechnologyInfoDataSelector = styled.ul`
@@ -45,6 +62,12 @@ export const TechnologyInfoDataSelector = styled.ul`
   flex-direction: column;
   margin-right: auto;
   gap: 32px;
+
+  @media (max-width: 920px) {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
 `
 
 interface SelectorBtnContainerProps {
@@ -61,6 +84,11 @@ export const SelectorBtnContainer = styled.li<SelectorBtnContainerProps>`
     border: 1px solid gray;
     transition: all .2s;
 
+    @media (max-width: 920px) {      
+      width: 60px;
+      height: 60px;
+    }
+
     &:hover {
       border: 1px solid ${(props) => props.theme.colors.light};
     }
@@ -75,6 +103,11 @@ export const SelectorBtnContainer = styled.li<SelectorBtnContainerProps>`
     font-weight: 400;
     line-height: normal;
     letter-spacing: 2px;
+    
+    @media (max-width: 920px) {
+      font-size: 24px;
+      letter-spacing: 1.5px;
+    }
 
     ${({ selected, theme }) => selected && `
       color: ${theme.colors.dark};
@@ -92,6 +125,12 @@ export const TechnologyInfoData = styled.div`
   align-self: flex-start;
   justify-content: space-between;
   gap: 14px;
+
+  @media (max-width: 920px) {
+    max-width: 458px;
+    max-height: none;
+    align-self: center;
+  }
 
   span {
     color: ${(props) => props.theme.colors.lighter};
@@ -113,6 +152,11 @@ export const TechnologyInfoData = styled.div`
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
+
+    @media (max-width: 920px) {
+      font-size: 40px;
+      margin-top: 5px;
+    }
   }
 
   p {
@@ -122,6 +166,11 @@ export const TechnologyInfoData = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
+
+    @media (max-width: 920px) {
+      font-size: 16px;
+      line-height: 28px;
+    }
   }
 `
 
@@ -130,5 +179,13 @@ export const ImageContainer = styled.picture`
 
   img {
     width: 100%;
+  }
+
+  @media (max-width: 920px) {
+    max-width: none;
+
+    img {
+      width: 97vw;
+    }
   }
 `

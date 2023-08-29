@@ -12,15 +12,7 @@ export default function Home() {
   const navigate = useNavigate()
 
   return (
-    <Container
-      as={motion.main}
-      initial={{ backgroundSize: '150%' }}
-      animate={{ backgroundSize: '100%' }}
-      transition={{
-        duration: 5,
-        ease: 'easeOut',
-      }}
-    >
+    <Container>
       <ContentContainer>
         <LeftContainer>
           <motion.span

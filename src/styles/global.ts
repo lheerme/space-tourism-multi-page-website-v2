@@ -10,6 +10,23 @@ export default createGlobalStyle`
   body {
     background-color: ${(props) => props.theme.colors.dark};
     color: ${(props) => props.theme.colors.light};
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: ${(props) => props.theme.colors.light};
+
+      &:hover {
+        background: ${(props) => props.theme.colors.lighter};
+      }
+    }
   }
 
   a {

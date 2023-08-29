@@ -39,15 +39,7 @@ export default function Destination() {
   })
 
   return (
-    <Container
-      as={motion.main}
-      initial={{ backgroundSize: '150%' }}
-      animate={{ backgroundSize: '100%' }}
-      transition={{
-        duration: 5,
-        ease: 'easeOut',
-      }}
-    >
+    <Container>
       <ContentContainer>
         <Purpose.Root>
           <Purpose.Number number={'01'} />

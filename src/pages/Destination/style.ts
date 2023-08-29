@@ -1,6 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { styled } from 'styled-components'
 import desktopImg from '../../assets/destination/background-destination-desktop.jpg'
+import tabletImg from '../../assets/destination/background-destination-tablet.jpg'
+import mobileImg from '../../assets/destination/background-destination-mobile.jpg'
 
 export const Container = styled.main`
   display: flex;
@@ -11,7 +13,16 @@ export const Container = styled.main`
   min-height: 100dvh;
   background-image: url(${desktopImg});
   background-size: cover;
-  padding-top: 150px;
+  background-repeat: no-repeat;
+  padding: 150px 15px 15px 15px;
+
+  @media (max-width: 920px) {
+    background-image: url(${tabletImg});
+  }
+
+  @media (max-width: 560px) {
+    background-image: url(${mobileImg});
+  }
 `
 
 export const ContentContainer = styled.section`
@@ -31,11 +42,24 @@ export const DestinationContainer = styled.article`
   align-items: center;
   overflow: hidden;
   padding: 10px 0;
+
+  @media (max-width: 920px) {
+    flex-direction: column;
+  }
 `
 
 export const Image = styled.img`
   max-width: 420px;
   width: 100%;
+
+  @media (max-width: 920px) {
+    margin-bottom: 53px;
+    max-width: 300px;
+  }
+
+  @media (max-width: 560px) {
+    max-width: 170px;
+  }
 `
 
 export const DestinationSelector = styled.ul`
@@ -44,6 +68,15 @@ export const DestinationSelector = styled.ul`
   display: flex;
   width: 100%;
   gap: 35px;
+
+  @media (max-width: 920px) {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
+
+  @media (max-width: 560px) {
+    gap: 26px
+  }
 `
 
 interface DestinationSelectorItemProps {
@@ -64,6 +97,11 @@ export const DestinationSelectorItem = styled.li<DestinationSelectorItemProps>`
   letter-spacing: 2.7px;
   cursor: pointer;
   position: relative;
+
+  @media (max-width: 560px) {
+    font-size: 14px;
+    letter-spacing: 2.362px;
+  }
 
   &::after {
     content: '';
@@ -91,9 +129,17 @@ export const DestinationSelectorItem = styled.li<DestinationSelectorItemProps>`
 export const DestinationInfo = styled.div`
   max-width: 450px;
   width: 100%;
+
+  @media (max-width: 920px) {
+    max-width: 620px;
+  }
 `
 
 export const DestinationInfoData = styled.div`
+  @media (max-width: 920px) {
+    text-align: center;
+  }
+
   h1 {
     color: ${(props) => props.theme.colors.light};
     font-family: 'Bellefair', sans-serif;
@@ -103,8 +149,17 @@ export const DestinationInfoData = styled.div`
     line-height: normal;
     margin-top: 12px;
     text-transform: uppercase;
-  }
 
+    @media (max-width: 920px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 56px;
+    }
+
+  }
+  
   & > p {
     color: ${(props) => props.theme.colors.lighter};
     font-family: 'Barlow', sans-serif;
@@ -113,6 +168,17 @@ export const DestinationInfoData = styled.div`
     font-weight: 400;
     line-height: 28px;
     margin-bottom: 54px;
+
+    @media (max-width: 920px) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 15px;
+      line-height: 25px;
+      margin-bottom: 32px;
+    }
   }
 `
 
@@ -121,7 +187,14 @@ export const DestinationNumbers = styled.div`
   display: flex;
   height: 89px;
 
+  @media (max-width: 560px) {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  
   div {
+    margin: 32px;
     width: 50%;
     display: flex;
     flex-direction: column;

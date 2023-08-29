@@ -9,4 +9,14 @@ export const Text = styled.span`
   line-height: normal;
   letter-spacing: 4.725px;
   text-transform: uppercase;
+
+  @media (max-width: 920px) {
+    font-size: 20px;
+    letter-spacing: 3.375px;
+  }
+
+  @media (max-width: 560px) {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
 `

@@ -38,15 +38,7 @@ export default function Crew() {
   })
 
   return (
-    <Container
-      as={motion.main}
-      initial={{ backgroundSize: '150%' }}
-      animate={{ backgroundSize: '100%' }}
-      transition={{
-        duration: 5,
-        ease: 'easeOut',
-      }}
-    >
+    <Container>
       <ContentContainer>
         <Purpose.Root margin="0px">
           <Purpose.Number number={'02'} />
@@ -70,7 +62,7 @@ export default function Crew() {
                       scale: 0.5,
                       display: 'inline-block',
                     }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    animate={{ opacity: 0.5042, scale: 1 }}
                     transition={{ duration: 0.5 }}
                   >
                     {person.role}

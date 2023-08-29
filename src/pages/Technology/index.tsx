@@ -12,7 +12,7 @@ import {
 import { Purpose } from '../../components/Purpose'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import { useState } from 'react'
+import React, { useState } from 'react'
 import launch from '../../assets/technology/image-launch-vehicle-portrait.jpg'
 import launchLandscape from '../../assets/technology/image-launch-vehicle-landscape.jpg'
 import spaceport from '../../assets/technology/image-spaceport-portrait.jpg'
@@ -52,15 +52,7 @@ export default function Technology() {
   })
 
   return (
-    <Container
-      as={motion.main}
-      initial={{ backgroundSize: '150%' }}
-      animate={{ backgroundSize: '100%' }}
-      transition={{
-        duration: 5,
-        ease: 'easeOut',
-      }}
-    >
+    <Container>
       <ContentContainer>
         <Purpose.Root margin="0px">
           <Purpose.Number number={'03'} />
@@ -99,7 +91,7 @@ export default function Technology() {
               {data?.map((technology, index) => {
                 if (index === tech) {
                   return (
-                    <>
+                    <React.Fragment key={index}>
                       <motion.h1
                         initial={{ opacity: 0, y: '40%' }}
                         animate={{ opacity: 1, y: 0 }}
@@ -114,7 +106,7 @@ export default function Technology() {
                       >
                         {technology.description}
                       </motion.p>
-                    </>
+                    </React.Fragment>
                   )
                 }
 
@@ -127,8 +119,8 @@ export default function Technology() {
             {images.map((img, index) => {
               if (index === tech) {
                 return (
-                  <>
-                    <source srcSet={img.landscape} media="(max-width: 600px)" />
+                  <React.Fragment key={index}>
+                    <source srcSet={img.landscape} media="(max-width: 920px)" />
                     <motion.img
                       initial={{ opacity: 0, scale: 0.5 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -136,7 +128,7 @@ export default function Technology() {
                       src={img.portrait}
                       alt=""
                     />
-                  </>
+                  </React.Fragment>
                 )
               }
 
