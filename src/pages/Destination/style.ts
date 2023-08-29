@@ -185,7 +185,6 @@ export const DestinationInfoData = styled.div`
 export const DestinationNumbers = styled.div`
   border-top: 1px solid #383b4b;
   display: flex;
-  height: 89px;
 
   @media (max-width: 560px) {
     flex-direction: column;
