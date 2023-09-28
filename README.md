@@ -1,27 +1,35 @@
-# React + TypeScript + Vite
+# Space Tourism Multi Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Space Tourism Multi Page](./preview.png)
 
-Currently, two official plugins are available:
+## Descrição
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este é um projeto fictício de um site de turismo espacial multi página, desenvolvido como parte do desafio da Frontend Mentor. O objetivo deste projeto é criar várias páginas que apresentam destinos emocionantes no espaço sideral e oferecem informações detalhadas sobre cada um deles. Desenvolvido com React, TypeScript, Framer Motion e styled-components.
 
-## Expanding the ESLint configuration
+[Link do Site](https://space-tourism-multi-page-website-v2.vercel.app)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## Funcionalidades
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- Navegação intuitiva entre as páginas de destino espacial.
+- Informações detalhadas sobre cada destino, incluindo descrição, custo e duração.
+- Animações suaves e interativas para uma experiência envolvente.
+- Estilização elegante e responsiva com styled-components.
+- Breve descrição da equipe.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Como Executar
+
+1. Clone este repositório em sua máquina local.
+2. Instale as dependências usando o comando:
+   ```
+   npm install
+   ```
+3. Inicie o aplicativo com:
+   ```
+   npm run dev
+   ```
+4. Abra o aplicativo no seu navegador.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou enviar pull requests.
